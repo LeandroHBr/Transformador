@@ -6,7 +6,7 @@ import schemdraw.elements as elm
 from circuit import gerar_svg_circuito
 
 st.set_page_config(page_title="Modelo em L - Transformador", layout="centered")
-st.title("Parâmetros e Circuito Equivalente em L")
+st.title("Circuito Equivalente em L")
 st.markdown(
     """
     <style>
@@ -36,9 +36,9 @@ position: fixed;
 left: 0;
 bottom: 0;
 width: 100%;
-background-color: #0e1117;
+background-color: #1E293B;
 color: #f1f1f1;
-text-align: right;
+text-align: center;
 }
 
 p{
@@ -67,7 +67,7 @@ with st.sidebar:
     p_cc = st.number_input("Potência CC (W)", value=240.0, step=1.0)
 
     st.subheader("Referência do Circuito")
-    relacao_a = st.number_input("Relação de transformação (a = V_AT / V_BT)", value=1.0, min_value=0.01, step=0.1)
+    relacao_a = st.number_input("Relação de transformação (a = V_Alta/V_Baixa)", value=1.0, min_value=0.01, step=0.1)
     referir_para = st.radio("Referir parâmetros ao lado:", ["Manter nos lados medidos", "Lado de Alta (AT)", "Lado de Baixa (BT)"])
 
 
